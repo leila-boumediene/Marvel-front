@@ -1,1 +1,95 @@
 /* Other rules */
+/* HEADER */
+.Header {
+  background-color: #ed171e;
+  width: 100vw;
+  display: flex;
+}
+.Logo {
+  height: 150px;
+  width: 400px;
+  object-fit: cover;
+  object-position: center;
+}
+.Menu {
+  display: flex;
+}
+.Buttons1,
+.Buttons2,
+.Buttons3 {
+  display: flex;
+  align-items: center;
+  padding: 5%;
+}
+.Personnage,
+.ComicsBD,
+.Favoris {
+  height: 60px;
+  width: 200px;
+  background-color: #ed171e;
+  border: none;
+
+  font-size: x-large;
+  color: white;
+  cursor: pointer;
+}
+
+/* COMICS*/
+.boxComics {
+  border: 2px red solid;
+  display: flex;
+  width: 250px;
+  flex-wrap: wrap;
+}
+.PictureComics {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 60px;
+  margin-left: 40px;
+  justify-content: space-evenly;
+}
+
+.PictureComi {
+  height: 250px;
+  width: 200px;
+  object-fit: cover;
+  object-position: center;
+  cursor: pointer;
+  margin: auto;
+  padding: 10px;
+}
+.descip {
+  display: flex;
+  text-align: justify;
+}
+
+/* CHARACTERS */
+.search-bar {
+}
+.boxCharacters {
+  border: 2px red solid;
+  display: flex;
+  width: 250px;
+  flex-wrap: wrap;
+}
+.PictureCharacters {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 60px;
+  margin-left: 40px;
+  justify-content: space-evenly;
+}
+
+.PictureCharact {
+  height: 250px;
+  width: 200px;
+  object-fit: cover;
+  object-position: center;
+  cursor: pointer;
+  margin: auto;
+  padding: 10px;
+}
+.descip {
+  display: flex;
+  text-align: justify;
+}
