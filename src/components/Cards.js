@@ -3,9 +3,9 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 // import { Link } from "react-router-dom";
 
-const Cards = () => {
+const Cards = (characterId) => {
   // je récupère l'ID déclaré en params du côté back
-  const { characterId } = useParams();
+  const { charactId } = useParams();
   console.log(characterId);
 
   const [data, setData] = useState();
@@ -19,9 +19,10 @@ const Cards = () => {
         );
 
         const character = response.results.data.characters;
+
         console.log(character);
         console.log(response.results.data);
-
+        console.log(characterId);
         setData(response.results.data);
         setIsLoading(false);
         // const characters = data._id;

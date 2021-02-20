@@ -21,33 +21,33 @@ const Login = ({ setUser }) => {
       console.log(error.message);
       //   setErrorMessage("indetification's wrong!!");
     }
-    return (
-      <div className="Formulaire">
-        <form className="connecter" onSubmit={handleSubmit}>
-          <h4>Se connecter</h4>
-          <input
-            className="email"
-            onChange={(event) => setEmail(event.target.value)}
-            type="text"
-            placeholder="email"
-          />
-          <input
-            className="mdp"
-            onChange={(event) => setPassword(event.target.value)}
-            type="password"
-            placeholder="password"
-          />
-
-          <button className="connexion" type="submit">
-            Se connecter
-          </button>
-          <Link to={`/signup`}>
-            <p className="oublie">Pas encore de compte ?</p>
-            <p className="aide">Inscris-toi !!</p>
-          </Link>
-        </form>
-      </div>
-    );
   };
+  return (
+    <div className="Formulaire">
+      <form className="connecter" onSubmit={handleSubmit}>
+        <h4>Se connecter</h4>
+        <input
+          className="email"
+          onChange={(event) => setEmail(event.target.value)}
+          type="text"
+          placeholder="email"
+        />
+        <input
+          className="mdp"
+          onChange={(event) => setPassword(event.target.value)}
+          type="password"
+          placeholder="password"
+        />
+
+        <button className="connexion" type="submit">
+          Se connecter
+        </button>
+        <Link to={`/signup`}>
+          <p className="oublie">Pas encore de compte ?</p>
+          <p className="aide">Inscris-toi !!</p>
+        </Link>
+      </form>
+    </div>
+  );
 };
 export default Login;
