@@ -1,12 +1,12 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 const Cards = () => {
   // je récupère l'ID déclaré en params du côté back
-  const { character } = useParams();
-  //   console.log(character);
+  const { characterId } = useParams();
+  console.log(characterId);
 
   const [data, setData] = useState();
   const [isLoading, setIsLoading] = useState(true);
@@ -14,15 +14,15 @@ const Cards = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`http://localhost:3001/characters`);
+        const response = await axios.get(
+          `http://localhost:3001/comics/:${characterId}`
+        );
 
-        console.log(response.data);
+        const character = response.results.data.characters;
+        console.log(character);
+        console.log(response.results.data);
 
-        const characters = response.results.characters;
-        console.log(characters);
-
-        setData(response.data);
-        console.log(setData);
+        setData(response.results.data);
         setIsLoading(false);
         // const characters = data._id;
       } catch (error) {
@@ -30,7 +30,7 @@ const Cards = () => {
       }
     };
     fetchData();
-  }, [character]);
+  }, [characterId]);
   return isLoading ? (
     <p>en cours de chargement...</p>
   ) : (
@@ -56,7 +56,7 @@ const Cards = () => {
       <div>
         <img
           src={data.thumbnail.path + "." + data.thumbnail.extension}
-          alt={data.results.name}
+          alt={data.name}
         />
         {data.comics.map((comics, index) => {
           return (

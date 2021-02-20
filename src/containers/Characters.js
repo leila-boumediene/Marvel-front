@@ -1,10 +1,12 @@
 // import userEvent from "@testing-library/user-event";
 import axios from "axios";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
-const Characters = () => {
+const Characters = ({ filter, setFilter }) => {
   const [data, setData] = useState();
   const [isLoading, setIsLoading] = useState(true);
+  const [searchResult, setSearchResult] = useState();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -35,8 +37,18 @@ const Characters = () => {
     <p>en cours de chargement...</p>
   ) : (
     <>
+      <div className="searchBar">
+        <input
+          type="search"
+          placeholder="Search"
+          onChange={(event) => {
+            setSearchResult(event.target.value);
+          }}
+        />
+      </div>
       {/* <div className="search-bar">
         <input
+          className="search-bar-characters"
           type="text"
           name=""
           id=""
@@ -54,15 +66,17 @@ const Characters = () => {
           return (
             <>
               <div className="boxCharacters" key={characters._id}>
-                <img
-                  className="PictureCharact"
-                  src={
-                    characters.thumbnail.path +
-                    "." +
-                    characters.thumbnail.extension
-                  }
-                  alt={characters.name}
-                />
+                <Link to={`/cards`}>
+                  <img
+                    className="PictureCharact"
+                    src={
+                      characters.thumbnail.path +
+                      "." +
+                      characters.thumbnail.extension
+                    }
+                    alt={characters.name}
+                  />
+                </Link>
                 <p className="Name"> {characters.name}</p>
                 <p className="descip"> {characters.description}</p>
               </div>

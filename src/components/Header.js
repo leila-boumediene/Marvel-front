@@ -5,7 +5,9 @@ const Header = () => {
   return (
     <>
       <div className="Header">
-        <img className="Logo" src={Logo} alt="" />
+        <Link to={`/`}>
+          <img className="Logo" src={Logo} alt="" />
+        </Link>
         <div className="Menu">
           <div className="Buttons1">
             <Link to={`/characters`}>
@@ -20,7 +22,7 @@ const Header = () => {
           </div>
           <div className="Buttons3">
             <Link to={`/favoris`}>
-              <button className="Favoris">FAVORTIES</button>
+              <button className="Favoris">FAVORITES</button>
             </Link>
           </div>
         </div>
