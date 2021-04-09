@@ -1,12 +1,12 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-const Cards = (characterId) => {
+const Cards = () => {
   // je récupère l'ID déclaré en params du côté back
-  const { charactId } = useParams();
-  console.log(characterId);
+  const { character } = useParams();
+  console.log(character);
 
   const [data, setData] = useState();
   const [isLoading, setIsLoading] = useState(true);
@@ -14,16 +14,11 @@ const Cards = (characterId) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(
-          `http://localhost:3001/comics/:${characterId}`
-        );
+        const response = await axios.get(`http://localhost:3001/characters`);
 
-        const character = response.results.data.characters;
+        console.log(response.data);
 
-        console.log(character);
-        console.log(response.results.data);
-        console.log(characterId);
-        setData(response.results.data);
+        setData(response.data);
         setIsLoading(false);
         // const characters = data._id;
       } catch (error) {
@@ -31,7 +26,7 @@ const Cards = (characterId) => {
       }
     };
     fetchData();
-  }, [characterId]);
+  }, [character]);
   return isLoading ? (
     <p>en cours de chargement...</p>
   ) : (
@@ -78,25 +73,3 @@ const Cards = (characterId) => {
   );
 };
 export default Cards;
-// {data.comics.map((comics, index) => {
-//     return (
-//       <img>
-//         <img
-//           src={
-//             characterId.thumbnail.path +
-//             "." +
-//             characterId.thumbnail.extension
-//           }
-//           alt=""
-//         />
-//         <div key={comics.title}>
-//           {comics.title}
-//           {comics.description}
-//           <img
-//             src={comics.thumbnail.path + "." + comics.thumbnail.extension}
-//             alt=""
-//           />
-//         </div>
-//       </img>
-//     );
-//   })}

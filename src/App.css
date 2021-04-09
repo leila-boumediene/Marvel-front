@@ -4,6 +4,15 @@ body {
   background-color: black;
   /* background-color: lightblue; */
 }
+.searchBar {
+  display: flex;
+  justify-content: center;
+  padding: 3%;
+}
+.search {
+  width: 400px;
+  height: 40px;
+}
 /* HEADER */
 .Header {
   background-color: #ed171e;
@@ -143,7 +152,126 @@ body {
   display: flex;
   text-align: justify;
   color: white;
+  font-family: "Comic Neue", cursive;
 }
 .Name {
   color: white;
+  font-family: "Comic Neue", cursive;
+}
+.add {
+  display: flex;
+  flex-direction: column;
+}
+.addFavoris {
+  display: flex;
+  flex-direction: column;
+}
+/* SIGNUP */
+.bodyform {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  margin-top: 100px;
+}
+h4 {
+  color: #ed171e;
+  font-family: "Comic Neue", cursive;
+  justify-content: center;
+}
+div .formulaire {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  border: transparent;
+  align-items: center;
+  height: 500px;
+}
+
+.line1,
+.line2,
+.line3,
+.line4 {
+  display: flex;
+  margin-top: 20px;
+  width: 200px;
+  border-top: transparent;
+  border-left: transparent;
+  border-right: transparent;
+  background-color: #eaedee;
+  font-family: "Comic Neue", cursive;
+}
+
+.news {
+  border: transparent;
+  background-color: transparent;
+  margin-top: 50px;
+  color: grey;
+}
+.paraph {
+  font-size: 13px;
+  margin-top: 30px;
+  color: grey;
+  width: 200px;
+  text-align: justify;
+}
+.inscrire {
+  color: #ed171e;
+  font-family: "Comic Neue", cursive;
+  margin-top: 30px;
+  width: 200px;
+}
+.question {
+  border: transparent;
+  height: 30px;
+  width: 250px;
+  border-radius: 5%;
+  text-align: center;
+  color: #ed171e;
+  margin-top: 30px;
+  cursor: pointer;
+  font-family: "Comic Neue", cursive;
+}
+/* LOGIN */
+.Bodyform {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  margin-top: 100px;
+}
+div .Formulaire {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  border: transparent;
+  align-items: center;
+  height: 500px;
+}
+.email,
+.mdp {
+  display: flex;
+  margin-top: 20px;
+  width: 200px;
+  border-top: transparent;
+  border-left: transparent;
+  border-right: transparent;
+  background-color: #eaedee;
+  font-family: "Comic Neue", cursive;
+}
+.connexion {
+  color: #ed171e;
+  font-family: "Comic Neue", cursive;
+  margin-top: 30px;
+  width: 200px;
+}
+.Notyet {
+  border: transparent;
+  height: 30px;
+  width: 200px;
+  border-radius: 5%;
+
+  color: #ed171e;
+  margin-top: 30px;
+  cursor: pointer;
+  font-family: "Comic Neue", cursive;
+  align-items: center;
 }
