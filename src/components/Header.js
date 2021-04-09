@@ -35,7 +35,7 @@ const Header = ({ search, setSearch }) => {
             </Link>
           </div> */}
         </div>
-        <form onSubmit={handleSubmit}>
+        {/* <form onSubmit={handleSubmit}>
           <input
             className="search-bar"
             type="text"
@@ -43,7 +43,7 @@ const Header = ({ search, setSearch }) => {
             onChange={(event) => setSearch(event.target.value)}
             value={search}
           />
-        </form>
+        </form> */}
       </div>
     </>
   );

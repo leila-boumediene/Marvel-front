@@ -24,7 +24,7 @@ const Comics = ({ filter, setFilter }) => {
     <p>en cours de chargement...</p>
   ) : (
     <>
-      <div className="searchBar">
+      {/* <div className="searchBar">
         <input
           type="search"
           placeholder="Search"
@@ -32,7 +32,7 @@ const Comics = ({ filter, setFilter }) => {
             setSearchResult(event.target.value);
           }}
         />
-      </div>
+      </div> */}
       <div className="searchbar"></div>
       <div className="PictureComics">
         {data.results.map((comics, index) => {

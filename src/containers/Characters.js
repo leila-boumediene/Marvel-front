@@ -37,7 +37,7 @@ const Characters = ({ filter, setFilter }) => {
     <p>en cours de chargement...</p>
   ) : (
     <>
-      <div className="searchBar">
+      {/* <div className="searchBar">
         <input
           type="search"
           placeholder="Search"
@@ -45,7 +45,7 @@ const Characters = ({ filter, setFilter }) => {
             setSearchResult(event.target.value);
           }}
         />
-      </div>
+      </div> */}
       {/* <div className="search-bar">
         <input
           className="search-bar-characters"
